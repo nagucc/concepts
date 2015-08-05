@@ -61,7 +61,15 @@ describe('Concept model test', function () {
 		});
 	});
 	
-	
+	it('removeDesc', function(done){
+		con.removeDesc('testDesc', function(err){
+			should.not.exist(err);
+			con.descriptions(function(err, descs){
+				descs.length.should.eql(0);
+				done();
+			});
+		});
+	})
 	
 	
 	it('del.删除Concept', function (done) {

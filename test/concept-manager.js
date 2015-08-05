@@ -31,6 +31,14 @@ describe('Concept model test', function () {
 		});
 	});
 	
+	it('names.获取Concept的names', function(done){
+		con.names(function(err, names){
+			should.not.exists(err);
+			should.exists(names);
+			done();
+		});
+	});
+	
 	it('del.删除Concept', function (done) {
 		cm.del(concept_id, function (err, result) {
 			should.not.exist(err);

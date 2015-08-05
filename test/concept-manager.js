@@ -1,18 +1,20 @@
+/* global it */
+/* global describe */
 var should = require("should");
 var neo = require('neo4j');
 var ConceptManager = require('../lib/concept-manager');
 
-var url = 'http://neo4j.ynu.edu.cn';
+var url = 'http://neo4j.nagu.cc';
 var db = new neo.GraphDatabase({url:url});
 
-var one = new ConceptManager(db);
+var cm = new ConceptManager(db);
 
 describe('Concept model test', function () {
 
 	var concept_id = null;
 	var con = null;
 	it('create.创建Concept', function (done) {
-		one.create(function (err, concept) {
+		cm.create(function (err, concept) {
 			should.not.exist(err);
 			concept.id.should.above(0);
 			concept_id = concept.id;
@@ -22,23 +24,15 @@ describe('Concept model test', function () {
 	});
 
 	it('get.获取Concept', function (done) {
-		one.get(concept_id, function (err, concept) {
+		cm.get(concept_id, function (err, concept) {
 			should.not.exist(err);
 			concept.id.should.above(0);
 			done();
 		});
 	});
-
-	// it('findByRdfsLabel', function (done) {
-	// 	one.findByRdfsLabel('label', function (err, concepts) {
-	// 		should.not.exist(err);
-	// 		done();
-	// 	});
-	// })
-
-
+	
 	it('del.删除Concept', function (done) {
-		one.del(concept_id, function (err, result) {
+		cm.del(concept_id, function (err, result) {
 			should.not.exist(err);
 			done();
 		});

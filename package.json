@@ -7,7 +7,7 @@
     "test": "mocha"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "neo4j": "^2.0.0-RC2",
     "should": "^7.0.1"

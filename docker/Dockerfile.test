@@ -1,0 +1,14 @@
+FROM google/nodejs
+
+RUN mkdir /app
+COPY ./index.js /app/
+COPY ./package.json /app/
+COPY ./lib /app/lib/
+COPY ./test /app/test/
+
+WORKDIR /app
+
+RUN npm install
+RUN npm install -g mocha
+
+CMD npm test

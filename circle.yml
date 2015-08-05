@@ -5,9 +5,9 @@ machine:
     - sudo curl -sSL https://get.docker.com/ | sh
 dependencies:
   override:
-    - docker info
-    - docker build -t ynuae/concepts-test -f docker/Dockerfile.test .
     - pip install docker-compose
+    - docker build -t ynuae/concepts-test -f docker/Dockerfile.test .
+    
     
 test:
   override:

@@ -5,10 +5,10 @@ machine:
     version: 0.10.22
 dependencies:
   override:
+    - docker run -itd -p 7474:7474 kbastani/docker-neo4j
     - npm install -g mocha
     - npm install
-    - docker run -itd -p 7474:7474 kbastani/docker-neo4j
 test:
   override:
-    - sleep 120
+    - sleep 50
     - NEO_HOST=http://localhost:7474 npm test

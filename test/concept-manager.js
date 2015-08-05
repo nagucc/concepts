@@ -5,7 +5,7 @@ var should = require("should");
 var neo = require('neo4j');
 var ConceptManager = require('../lib/concept-manager');
 
-var url = process.env.NEO_HOST || 'http://neo4j.nagu.cc';
+var url = process.env.NEO_HOST || 'http://localhost:7474';
 var db = new neo.GraphDatabase({url:url});
 
 var cm = new ConceptManager(db);

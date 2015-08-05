@@ -7,8 +7,8 @@ dependencies:
   override:
 #    - pip install -r requirements.txt
 #    - docker build -t ynuae/concepts-test -f docker/Dockerfile.test .
-    - node install -g mocha
-    - node install
+    - npm install -g mocha
+    - npm install
     - docker run -itd -p 7474:7474 kbastani/docker-neo4j
 test:
   override:

@@ -1,0 +1,15 @@
+{
+  "name": "Concepts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "neo4j": "^2.0.0-RC2",
+    "should": "^7.0.1"
+  }
+}

@@ -5,11 +5,10 @@ machine:
     version: 0.10.22
 dependencies:
   override:
-#    - pip install -r requirements.txt
-#    - docker build -t ynuae/concepts-test -f docker/Dockerfile.test .
     - npm install -g mocha
     - npm install
     - docker run -itd -p 7474:7474 kbastani/docker-neo4j
 test:
   override:
+    - curl http://localhost:7474
     - NEO_HOST=http://localhost:7474 npm test

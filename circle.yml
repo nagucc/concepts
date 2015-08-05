@@ -3,10 +3,8 @@ machine:
     - docker
 dependencies:
   override:
-    - pip install docker-compose
+    - pip install -r requirements.txt
     - docker build -t ynuae/concepts-test -f docker/Dockerfile.test .
-    
-    
 test:
   override:
     - cd docker && docker-compose up

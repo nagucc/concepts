@@ -31,10 +31,10 @@ describe('Concept model test', function () {
 		});
 	});
 	
-	// it('del.删除Concept', function (done) {
-	// 	cm.del(concept_id, function (err, result) {
-	// 		should.not.exist(err);
-	// 		done();
-	// 	});
-	// });
+	it('del.删除Concept', function (done) {
+		cm.del(concept_id, function (err, result) {
+			should.not.exist(err);
+			done();
+		});
+	});
 });

@@ -1,0 +1,10 @@
+machine:
+  services:
+    - docker
+dependencies:
+  override:
+    - docker info
+    - docker build -t ynuae/concepts-test -f docker/Dockerfile.test .
+test:
+  override:
+    - cd docker && docker-compose up

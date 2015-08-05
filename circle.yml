@@ -1,10 +1,15 @@
 machine:
   services:
     - docker
+  node:
+    version: 0.10.22
 dependencies:
   override:
-    - pip install -r requirements.txt
-    - docker build -t ynuae/concepts-test -f docker/Dockerfile.test .
+#    - pip install -r requirements.txt
+#    - docker build -t ynuae/concepts-test -f docker/Dockerfile.test .
+    - node install -g mocha
+    - node install
+    - docker run -itd -p 7474:7474 kbastani/docker-neo4j
 test:
   override:
-    - cd docker && docker-compose up
+    - npm test

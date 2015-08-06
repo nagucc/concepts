@@ -2,13 +2,11 @@
 /* global it */
 /* global describe */
 var should = require("should");
-var neo = require('neo4j');
 var ConceptManager = require('../lib/concept-manager');
 
 var url = process.env.NEO_HOST || 'http://neo4j.ynu.edu.cn';
-var db = new neo.GraphDatabase({url:url});
 
-var cm = new ConceptManager(db);
+var cm = new ConceptManager(url);
 
 describe('Concept model test', function () {
 

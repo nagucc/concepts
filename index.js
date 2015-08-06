@@ -1,12 +1,9 @@
-var Person = require('./lib/person');
-var url = 'http://neo4j.ynu.edu.cn';
-var na = new Person(null, url);
+var Concept = require('./lib/concept');
+var ConceptManager = require('./lib/concept-manager');
+var Middleware = require('./lib/concept-middleware');
 
-na.create('na57', 'na57 person', function (err, result) {
-	console.log('done');
-});
-
-var ex = new Person(21, url);
-ex.delete(function () {
-	console.log('deleted');
-});
+module.exports = {
+	Concept: Concept,
+	ConceptManager: ConceptManager,
+	Middleware: Middleware
+};

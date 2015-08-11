@@ -1,7 +1,7 @@
 {
   "name": "Concepts",
   "version": "1.0.0",
-  "description": "",
+  "description": "概念图组件",
   "main": "index.js",
   "scripts": {
     "test": "mocha"

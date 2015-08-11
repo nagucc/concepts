@@ -30,7 +30,7 @@ describe('Concept model test', function () {
 	});
 	
 	it('addName.添加Concept的name', function(done){
-		con.addName('testName', function(err, result){
+		con.addName('testName', {creator:'na' }, function(err, result){
 			con.names(function(err, names){
 				names.length.should.above(0);
 				names[0].should.eql('testName');

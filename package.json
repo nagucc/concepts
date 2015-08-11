@@ -1,6 +1,6 @@
 {
   "name": "nagu-concepts",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "用于管理Concept的库",
   "main": "index.js",
   "directories": {

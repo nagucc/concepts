@@ -49,6 +49,13 @@ describe('Concept model test', function () {
 		});
 	});
 	
+	it('findByName', function(done){
+		cm.findByName('testName', function(err, cs){
+			cs.length.should.above(0);
+			done();
+		});
+	});
+	
 	it('removeName.删除Concept的name', function(done){
 		con.removeName('testName', function(err, result){
 			should.not.exist(err);

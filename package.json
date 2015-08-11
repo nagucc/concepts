@@ -1,6 +1,6 @@
 {
-  "name": "nagucc-concepts",
-  "version": "1.0.0",
+  "name": "nagu-concepts",
+  "version": "1.0.1",
   "description": "用于管理Concept的库",
   "main": "index.js",
   "directories": {
@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "js.class": "^2.5.2",
-    "jsclass": "^4.0.5",
     "neo4j": "^2.0.0-RC2",
     "should": "^7.0.1"
   },

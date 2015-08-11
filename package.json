@@ -1,16 +1,29 @@
 {
-  "name": "Concepts",
+  "name": "nagucc-concepts",
   "version": "1.0.0",
-  "description": "概念图组件",
+  "description": "用于管理Concept的库",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "js.class": "^2.5.2",
+    "jsclass": "^4.0.5",
+    "neo4j": "^2.0.0-RC2",
+    "should": "^7.0.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "mocha"
   },
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "js.class": "^2.5.2",
-    "neo4j": "^2.0.0-RC2",
-    "should": "^7.0.1"
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nagucc/concepts.git"
+  },
+  "author": "na57",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/nagucc/concepts/issues"
+  },
+  "homepage": "https://github.com/nagucc/concepts"
 }

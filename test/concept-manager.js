@@ -12,8 +12,8 @@ describe('Concept model test', function () {
 
 	var concept_id = null;
 	var con = null;
-	it('create.创建Concept', function (done) {
-		cm.create(function (err, concept) {
+	it('addNew.创建Concept', function (done) {
+		cm.addNew(function (err, concept) {
 			should.not.exist(err);
 			concept.id.should.above(0);
 			concept_id = concept.id;

@@ -5,7 +5,7 @@ var should = require("should");
 var ConceptManager = require('../lib/concept-manager');
 
 var url = process.env.NEO_HOST || 'http://neo4j.ynu.edu.cn';
-
+console.log('url: ' + url);
 var cm = new ConceptManager(url);
 
 describe('Concept model test', function () {

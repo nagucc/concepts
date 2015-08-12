@@ -5,7 +5,7 @@ machine:
     version: 0.10.22
 dependencies:
   override:
-    - docker run -it -p 7474:7474 kbastani/docker-neo4j
+    - docker run -it -p 7474:7474 kbastani/docker-neo4j:2.2.1
     - npm install -g mocha
     - npm install
 test:

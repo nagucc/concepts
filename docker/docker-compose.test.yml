@@ -1,6 +1,6 @@
 # Neo4j
 neo4j:
-  image: kbastani/docker-neo4j
+  image: kbastani/docker-neo4j:2.2.1
   ports:
     - "7474:7474"
 #concept-test

@@ -10,5 +10,6 @@ dependencies:
     - npm install
 test:
   override:
+    - docker build -f ./docker/Dockerfile.test -t ynuae/concepts-test .
     - curl http://127.0.0.1:7474
-    - NEO_HOST=http://localhost:7474 npm test
+    - docker-compose -f ./docker/docker-compose.test.yml up

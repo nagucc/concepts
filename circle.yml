@@ -10,5 +10,5 @@ dependencies:
     - npm install
 test:
   override:
-    - sleep 50
+    - curl http://localhost:7474
     - NEO_HOST=http://localhost:7474 npm test

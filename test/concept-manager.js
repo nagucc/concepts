@@ -3,6 +3,7 @@
 /* global describe */
 var should = require("should");
 var ConceptManager = require('../lib/concept-manager');
+var Concept = require('../lib/concept');
 
 var url = process.env.NEO_HOST || 'http://neo4j.ynu.edu.cn';
 console.log('url: ' + url);
@@ -73,6 +74,26 @@ describe('Concept model test', function () {
 				descs.length.should.eql(0);
 				done();
 			});
+		});
+	});
+
+	it('addPv(property, Concept).将当前节点和现有节点连接起来', function (done) {
+		con.addPv({
+			label: 'TestRelationship',
+			values: {creator: 'na', dateCreated: new Date()}
+		}, new Concept(url, 163), function (err, result) {
+			should.not.exist(err);
+			done();
+		});
+	});
+
+	it('removePv', function  (done) {
+		con.removePv({
+			label: 'TestRelationship',
+			values: {creator: 'na', dateCreated: new Date()}
+		}, new Concept(url, 163), function (err, result) {
+			should.not.exist(err);
+			done();
 		});
 	})
 	

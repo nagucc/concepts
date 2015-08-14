@@ -99,7 +99,7 @@ describe('Concept model test', function () {
 	
 	
 	it('del.删除Concept', function (done) {
-		cm.del(concept_id, function (err, result) {
+		cm.del(con, function (err, result) {
 			should.not.exist(err);
 			done();
 		});

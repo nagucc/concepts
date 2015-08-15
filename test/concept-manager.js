@@ -17,7 +17,7 @@ describe('Concept model test', function () {
 		this.timeout(15000);
 		cm.addNew(function (err, concept) {
 			should.not.exist(err);
-			concept.id.should.above(0);
+			concept.id.should.above(-1);
 			concept_id = concept.id;
 			con = concept
 			done();
@@ -26,7 +26,7 @@ describe('Concept model test', function () {
 
 	it('get.获取Concept', function (done) {
 		cm.get(concept_id, function (err, concept) {
-			concept.id.should.above(0);
+			concept.id.should.above(-1);
 			done();
 		});
 	});

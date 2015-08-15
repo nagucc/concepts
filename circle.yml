@@ -9,5 +9,4 @@ dependencies:
     - npm install
 test:
   override:
-    - curl http://localhost:7474/db/data
-    - NEO_HOST=http://localhost:7474 npm test
+    - NEO_HOST=http://neo4j:neo4j@localhost:7474 npm test

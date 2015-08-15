@@ -9,5 +9,5 @@ dependencies:
     - npm install
 test:
   override:
-    - curl http://localhost:7474
+    - curl http://localhost:7474/db/data
     - NEO_HOST=http://localhost:7474 npm test

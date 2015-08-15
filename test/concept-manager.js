@@ -19,6 +19,7 @@ describe('Concept model test', function () {
 			should.not.exist(err);
 			concept.id.should.above(-1);
 			concept_id = concept.id;
+			concept.labels.indexOf(Concept.LABEL).should.above(-1);
 			con = concept
 			done();
 		});
@@ -51,6 +52,16 @@ describe('Concept model test', function () {
 				values[0].should.eql('testDesc');
 				done();
 			});
+		});
+	});
+
+	it('在添加name和desc后，get可以获得properties', function (done) {
+		this.timeout(15000);
+		cm.get(concept_id, function (err, concept) {
+			concept.id.should.above(-1);
+			concept.properties.name.should.eql('testName');
+			concept.properties.desc.should.eql('testDesc');
+			done();
 		});
 	});
 	

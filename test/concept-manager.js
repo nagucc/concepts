@@ -25,6 +25,7 @@ describe('Concept model test', function () {
 	});
 
 	it('get.获取Concept', function (done) {
+		this.timeout(15000);
 		cm.get(concept_id, function (err, concept) {
 			concept.id.should.above(-1);
 			done();
@@ -32,6 +33,7 @@ describe('Concept model test', function () {
 	});
 	
 	it('addName.添加Concept的name', function(done){
+		this.timeout(15000);
 		con.addName('testName', {creator:'na' }, function(err, result){
 			con.names(function(err, names){
 				names.length.should.above(0);
@@ -42,6 +44,7 @@ describe('Concept model test', function () {
 	});
 	
 	it('addDesc', function(done){
+		this.timeout(15000);
 		con.addDesc('testDesc', function(err, result){
 			con.descriptions(function(err, values){
 				values.length.should.above(0);
@@ -52,6 +55,7 @@ describe('Concept model test', function () {
 	});
 	
 	it('findByName', function(done){
+		this.timeout(15000);
 		cm.findByName('testName', function(err, cs){
 			cs.length.should.above(0);
 			done();
@@ -59,6 +63,7 @@ describe('Concept model test', function () {
 	});
 	
 	it('removeName.删除Concept的name', function(done){
+		this.timeout(15000);
 		con.removeName('testName', function(err, result){
 			should.not.exist(err);
 			con.names(function(err, names){
@@ -69,6 +74,7 @@ describe('Concept model test', function () {
 	});
 	
 	it('removeDesc', function(done){
+		this.timeout(15000);
 		con.removeDesc('testDesc', function(err){
 			should.not.exist(err);
 			con.descriptions(function(err, descs){
@@ -79,6 +85,7 @@ describe('Concept model test', function () {
 	});
 
 	it('addPv(property, Concept).将当前节点和现有节点连接起来', function (done) {
+		this.timeout(15000);
 		con.addPv({
 			label: 'TestRelationship',
 			values: {creator: 'na', dateCreated: new Date()}
@@ -89,6 +96,7 @@ describe('Concept model test', function () {
 	});
 
 	it('removePv', function  (done) {
+		this.timeout(15000);
 		con.removePv({
 			label: 'TestRelationship',
 			values: {creator: 'na', dateCreated: new Date()}
@@ -100,6 +108,7 @@ describe('Concept model test', function () {
 	
 	
 	it('del.删除Concept', function (done) {
+		this.timeout(15000);
 		cm.del(con, function (err, result) {
 			should.not.exist(err);
 			done();
